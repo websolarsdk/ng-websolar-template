@@ -1,0 +1,87 @@
+
+
+/* You can add global styles to this file, and also import other style files */
+
+@import "./assets/styles/mat.theme.scss";
+@import "./assets/styles/mat.overwrite.scss";
+@import "./assets/styles/charts.overwrites.scss";
+@import "./assets/styles/loader.scss";
+@import "./assets/styles/notify.scss";
+@import "./assets/styles/common.scss";
+
+@import "/src/assets/styles/tables.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp&display=block");
+
+html,
+body {
+    height: 100%;
+    -webkit-text-size-adjust: none;
+    overflow-y: hidden !important;
+    font-display: block !important;
+    box-sizing: border-box;
+    color: #65727f;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+::placeholder {
+    color: #878787;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.show-sm {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .hide-sm {
+        display: none !important;
+    }
+
+    .show-sm {
+        display: block !important;
+    }
+}
+
+@media (max-width: 1365px) {
+    .hide-md {
+        display: none !important;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

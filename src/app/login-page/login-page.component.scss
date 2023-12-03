@@ -1,0 +1,61 @@
+@import "variables.scss";
+
+.component {
+    color: $color-text-grey;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .form-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form {
+            width: 450px;
+            max-width: 80vw;
+            margin: 40px auto;
+
+            mat-form-field {
+                width: 100%;
+            }
+
+            .login-btn-wrapper {
+                img {
+                    height: 16px;
+                }
+
+                button {
+                    width: 100%;
+                    margin-bottom: 16px;
+                }
+            }
+
+            .actions {
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                justify-content: space-between;
+
+                .link {
+                    font-weight: 500;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .actions {
+        font-size: 12px;
+    }
+}

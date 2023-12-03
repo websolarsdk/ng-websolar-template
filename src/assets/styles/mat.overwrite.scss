@@ -1,0 +1,17 @@
+@import "variables.scss";
+
+input {
+    &.mat-input-element {
+        color: rgba(101, 114, 127, 0.87) !important;
+    }
+}
+
+.mat-tab-label {
+    min-width: 80px !important;
+}
+
+// .mat-stroked-button:not(.mat-button-disabled) {
+//     border-color: $color-blue;
+// }
+
+

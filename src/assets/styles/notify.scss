@@ -1,0 +1,63 @@
+@import "variables.scss";
+
+@mixin snack-item($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    box-shadow: 0 4px 10px rgba(6, 12, 27, 0.15);
+    text-align: center;
+
+    .mat-simple-snackbar-action {
+        color: $text-color !important;
+    }
+
+    .dismiss-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 34px;
+        padding: 0 7px;
+        border-radius: 2px;
+        box-sizing: border-box;
+        white-space: nowrap;
+        border: none;
+        transition: 0.1s;
+        cursor: pointer;
+        color: #828282;
+        background: $bg-color;
+
+        .mat-icon {
+            font-size: 20px;
+        }
+
+        &:hover {
+            color: #5b5b5b;
+        }
+    }
+}
+
+
+.mat-snack-bar-container {
+
+    .snack-message {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+    }
+}
+
+.snack-success {
+    @include snack-item($color-white, $color-success);
+}
+
+.snack-warn {
+    @include snack-item($color-white, $color-alert);
+}
+
+.snack-error {
+    @include snack-item($color-white, $color-error);
+}
+
+.snack-info {
+    @include snack-item($color-white, $color-blue);
+}

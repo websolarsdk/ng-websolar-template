@@ -1,0 +1,22 @@
+.component {
+    display: flex;
+    height: 100%;
+
+    .sidebar {
+        height: 100%;
+    }
+
+    .layout {
+        flex: 1;
+    }
+
+    &.hide-layout {
+        .sidebar {
+            flex: 1;
+        }
+
+        .layout {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@import "variables.scss";
+
+.component {
+    height: 100%;
+    overflow-y: auto;
+
+    .title {
+        font-size: 33px;
+        color: $color-text-grey;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .info {
+        margin: 24px;
+        font-size: 20px;
+        color: $color-text-grey;
+        text-align: center;
+
+        a {
+            color: $color-text-grey;
+            font-weight: 500;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        min-width: 200px;
+        padding: 16px;
+
+        .search {
+            width: 500px;
+            max-width: 90vw;
+
+            mat-form-field {
+                width: 100%;
+            }
+        }
+
+        .projects-list {
+            max-width: 90vw;
+
+            .table-wrapper {
+                width: 100%;
+
+                table {
+                    width: 100%;
+                    table-layout: fixed;
+
+                    tr {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
