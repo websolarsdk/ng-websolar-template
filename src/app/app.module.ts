@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppMaterialModule } from './app.material';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {  NgWebsolarModule } from 'ng-websolar';
+import {  NgWebsolarModule } from '@websolar/ng-websolar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

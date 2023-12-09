@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Solar, AuthService, ProjectService, NotifyService } from 'ng-websolar';
+import { Solar, AuthService, ProjectService, NotifyService } from '@websolar/ng-websolar';
 
 @Component({
   selector: 'app-project-edit-page',

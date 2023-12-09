@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Solar, SolarInstance, App, ProjectService, NotifyService, AuthService, ObjectService } from 'ng-websolar';
+import { Solar, SolarInstance, App, ProjectService, NotifyService, AuthService, ObjectService } from '@websolar/ng-websolar';
 
 @Component({
     selector: 'app-design-page',

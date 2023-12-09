@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { Router } from '@angular/router';
-import { Solar, ProjectService, NotifyService } from 'ng-websolar';
+import { Solar, ProjectService, NotifyService } from '@websolar/ng-websolar';
 
 
 @Component({

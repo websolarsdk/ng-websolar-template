@@ -1,7 +1,7 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NotifyService } from 'ng-websolar';
-import { AuthService } from 'ng-websolar';
+import { NotifyService } from '@websolar/ng-websolar';
+import { AuthService } from '@websolar/ng-websolar';
 
 @Component({
   selector: 'app-login-page',
