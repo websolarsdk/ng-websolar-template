@@ -44,11 +44,6 @@ export class DesignPageComponent implements OnInit {
                 throw `project id is not passed`;
             }
 
-            if (query["token"]) {
-                // set session token
-                this._auth.setToken(query["token"]);
-            }
-
             // load objects first
             const objects = await this._objService.find({ projectId: id });
 

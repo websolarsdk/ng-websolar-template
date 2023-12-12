@@ -1,0 +1,46 @@
+<app-local-css cssURL="/assets/styles/permit.package.css"></app-local-css>
+
+<div class="content-page">
+
+    <div class="back-btn hide-print"
+         *ngIf="type == 'project'">
+        <button mat-stroked-button
+                color="primary"
+                (click)="back()">
+            <mat-icon fontSet="material-icons-outlined">arrow_back_ios</mat-icon>
+            Back to Project
+        </button>
+    </div>
+
+    <div class="title-wrapper hide-print"
+         *ngIf="project && !isLoading">
+
+        <div class="note-about-error">
+            Discovered an error? Let us know at <a href="mailto:{{email}}"> {{email}} </a>,
+            and our team will resolve it for you.
+        </div>
+
+        <ng-container>
+            <div class="print-btn">
+                <button mat-flat-button
+                        color="primary"
+                        (click)="print()">
+                    <mat-icon>print</mat-icon>
+                    Print Document
+                </button>
+            </div>
+        </ng-container>
+    </div>
+
+    <div class="loader"
+         *ngIf="isLoading">
+        <mat-spinner></mat-spinner>
+    </div>
+
+    <div *ngIf="!isLoading && id && type">
+        <websolar-permit-page [type]="type"
+                              [id]="id"></websolar-permit-page>
+    </div>
+
+
+</div>

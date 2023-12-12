@@ -9,18 +9,29 @@ import {  NgWebsolarModule } from '@websolar/ng-websolar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { ProjectListPageComponent } from './project-list-page/project-list-page.component';
-import { ProjectEditPageComponent } from './project-edit-page/project-edit-page.component';
-import { DesignPageComponent } from './design-page/design-page.component';
+import { ProjectListPageComponent } from './project/project-list-page/project-list-page.component';
+import { ProjectEditPageComponent } from './project/project-edit-page/project-edit-page.component';
+import { DesignPageComponent } from './rooftop/design-page/design-page.component';
+import { RooftopSidebarComponent } from './rooftop/rooftop-sidebar/rooftop-sidebar.component';
+import { LocalCssComponent } from './components/local-css/local-css.component';
+import { AuthGuard } from './guards/auth.guard';
+import { HostPageComponent } from './host-page/host-page.component';
+import { SplitStringPipe } from './pipes/split.string.pipe';
+import { SharePageComponent } from './share/share-page/share-page.component';
+import { PermitPageComponent } from './permit/permit-page/permit-page.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        LoginPageComponent,
         ProjectListPageComponent,
         ProjectEditPageComponent,
-        DesignPageComponent
+        DesignPageComponent,
+        RooftopSidebarComponent,
+        LocalCssComponent,
+        HostPageComponent,
+        SplitStringPipe,
+        SharePageComponent,
+        PermitPageComponent
     ],
     imports: [
         BrowserModule,
@@ -34,6 +45,7 @@ import { DesignPageComponent } from './design-page/design-page.component';
         NgWebsolarModule
     ],
     providers: [
+        AuthGuard
     ],
     bootstrap: [AppComponent]
 })

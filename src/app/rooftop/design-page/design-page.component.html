@@ -1,9 +1,9 @@
 <div class="component"
      [class.hide-layout]="mode == 'Mounting'">
     <div class="sidebar">
-        <websolar-rooftop-sidebar [instance]="instance"
-                                  [project]="project"
-                                  [(mode)]="mode"></websolar-rooftop-sidebar>
+        <app-rooftop-sidebar [instance]="instance"
+                             [project]="project"
+                             [(mode)]="mode"></app-rooftop-sidebar>
     </div>
     <div class="layout">
         <websolar-rooftop-layout [project]="project"
@@ -11,4 +11,9 @@
                                  [toolbar]="true"
                                  (instanceReady)="onInstanceReady($event)"></websolar-rooftop-layout>
     </div>
+</div>
+
+<div class="loading-wrapper"
+     *ngIf="isLoading">
+    <websolar-loading></websolar-loading>
 </div>

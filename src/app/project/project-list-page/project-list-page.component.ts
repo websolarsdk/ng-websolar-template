@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { Router } from '@angular/router';
-import { Solar, ProjectService, NotifyService } from '@websolar/ng-websolar';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Solar, ProjectService, NotifyService, AuthService } from '@websolar/ng-websolar';
 
 
 @Component({
@@ -32,10 +32,20 @@ export class ProjectListPageComponent implements OnInit {
     constructor(
         private _projectService: ProjectService,
         private _notify: NotifyService,
-        private _router: Router
+        private _router: Router,
+        private _activatedRoute: ActivatedRoute,
+        private _auth: AuthService
     ) { }
 
     async ngOnInit() {
+
+
+        const query = this._activatedRoute.snapshot.queryParams;
+        if (query["token"]) {
+            // set session token
+            this._auth.setToken(query["token"]);
+        }
+
         setTimeout(() => {
             this.reload();
         }, 500)
@@ -75,7 +85,6 @@ export class ProjectListPageComponent implements OnInit {
     private async reload() {
         try {
             this.isLoading = true;
-
 
             this.paginator.pageIndex = 0;
             this.resultsLength = await this._projectService.count({

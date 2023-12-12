@@ -1,0 +1,37 @@
+.component {
+    display: flex;
+    background: white;
+    height: 100%;
+    width: 100%;
+
+    .side-pannel {
+        width: 220px;
+        height: 100%;
+    }
+
+    .second-panel {
+        width: 300px;
+        height: 100%;
+        box-shadow: inset -1px 0px 0px #ececed;
+        overflow-y: auto;
+    }
+
+    &.wide-second-panel {
+        .second-panel {
+            width: 600px;
+        }
+    }
+
+    &.full-second-panel {
+        .second-panel {
+            flex: 1;
+        }
+    }
+
+    &.full-panel-width {
+        .second-panel {
+            width: calc(100vw - 220px);
+            overflow-y: hidden;
+        }
+    }
+}

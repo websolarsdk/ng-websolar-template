@@ -1,0 +1,26 @@
+<div class="component"
+     [class.wide-second-panel]="largePanels.includes(mode)"
+     [class.sm-full-height]="mode == 'Reports'"
+     [class.full-second-panel]="mode == 'Mounting'">
+    <div class="side-pannel">
+        <websolar-rooftop-sidebar-tree [mode]="mode"
+                                       [project]="project"
+                                       [instance]="instance"
+                                       (itemActivated)="onMenuItemActivate($event)"
+                                       [hideBack]="hideBack"
+                                       (back)="onBack()"></websolar-rooftop-sidebar-tree>
+    </div>
+    <div #secondPanel
+         class="second-panel"
+         [ngSwitch]="mode">
+
+        <ng-container *ngSwitchDefault>
+            <websolar-rooftop-sidebar-content [instance]="instance"
+                                              [project]="project"
+                                              [(mode)]="mode"
+                                              (modeChange)="onMenuItemActivate($event)"></websolar-rooftop-sidebar-content>
+        </ng-container>
+
+
+    </div>
+</div>
