@@ -15,10 +15,10 @@ import { DesignPageComponent } from './rooftop/design-page/design-page.component
 import { RooftopSidebarComponent } from './rooftop/rooftop-sidebar/rooftop-sidebar.component';
 import { LocalCssComponent } from './components/local-css/local-css.component';
 import { AuthGuard } from './guards/auth.guard';
-import { HostPageComponent } from './host-page/host-page.component';
 import { SplitStringPipe } from './pipes/split.string.pipe';
 import { SharePageComponent } from './share/share-page/share-page.component';
 import { PermitPageComponent } from './permit/permit-page/permit-page.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
     declarations: [
@@ -28,10 +28,10 @@ import { PermitPageComponent } from './permit/permit-page/permit-page.component'
         DesignPageComponent,
         RooftopSidebarComponent,
         LocalCssComponent,
-        HostPageComponent,
         SplitStringPipe,
         SharePageComponent,
-        PermitPageComponent
+        PermitPageComponent,
+        SignInComponent
     ],
     imports: [
         BrowserModule,

@@ -5,8 +5,8 @@ import { ProjectEditPageComponent } from './project/project-edit-page/project-ed
 import { ProjectListPageComponent } from './project/project-list-page/project-list-page.component';
 import { PermitPageComponent } from './permit/permit-page/permit-page.component';
 import { AuthGuard } from './guards/auth.guard';
-import { HostPageComponent } from './host-page/host-page.component';
 import { SharePageComponent } from './share/share-page/share-page.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 const routes: Routes = [
@@ -23,7 +23,7 @@ const routes: Routes = [
     { path: 'design/:id', component: DesignPageComponent, canActivate: [AuthGuard] },
     { path: 'share/:id', component: SharePageComponent },
     { path: 'permit/:type/:id', component: PermitPageComponent },
-    { path: 'host', component: HostPageComponent },
+    { path: 'sign-in', component: SignInComponent },
     { path: '**', redirectTo: "project" }
 ];
 
